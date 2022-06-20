@@ -10,6 +10,20 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
+    <header class="container">
+        <nav>
+          <ul>
+            <%# <li><strong>Brand</strong></li> %>
+          </ul>
+          <ul>
+            <li><%= link_to "Home", home_index_path %></li>
+            <li><%#= link_to "Historias", stories_path %></li>
+            <%# <li><a href="#">Link</a></li> %>
+            <%# <li><a href="#" role="button">Button</a></li> %>
+          </ul>
+        </nav>
+    </header>
+
     <main class="container">
       <%= yield %>
     </main>
