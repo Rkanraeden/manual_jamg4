@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
-  get 'sessions/create'
-  get 'sessions/destroy'
   # get 'registrations/new'
   get 'home/index'
   # resources :stories
@@ -13,5 +10,8 @@ Rails.application.routes.draw do
   get 'sign_up', to: 'users#new'
   post 'sign_up', to: 'users#create'
 
+  get 'sign_in', to: 'sessions#new'
+  post 'sign_in', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
 
 end
